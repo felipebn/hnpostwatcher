@@ -1,6 +1,6 @@
 {
     "name": "HN Post Update Watcher",
-        "version": "1.0",
+        "version": "1.1",
         "description":
             "Shows off desktop notifications as watched posts gets new comments on HackerNews",
         "icons": {"16": "hn16.png", "48": "hn48.png", "128": "hn128.png"},
