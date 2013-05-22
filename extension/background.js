@@ -91,7 +91,7 @@ document.getElementsByTagName('body')[0].appendChild( scriptutilstag );
 // Conditionally initialize the options.
 if (!localStorage.isInitialized) {
     localStorage.isActivated = true;   // The display activation.
-    localStorage.frequency = 1;        // The display frequency, in minutes.
+    localStorage.frequency = 15;        // The display frequency, in minutes.
     localStorage.isInitialized = true; // The option initialization.
 }
 

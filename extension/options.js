@@ -112,10 +112,11 @@ window.addEventListener('load', function() {
     options.frequency.onchange = function() {
         if( options.frequency.value < 15 ){
             alert( "Min refresh interval is 15 minutes!" );
+            options.frequency.value = localStorage.frequency;
+            options.frequency.focus();
         }else{
             localStorage.frequency = options.frequency.value;
         }
-            localStorage.frequency = options.frequency.value;
     };
 
     options.addlink.onclick = function(){
