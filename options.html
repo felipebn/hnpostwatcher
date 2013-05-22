@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+    <head>
+        <title>HN Post Update Watcher</title>
+        <link href='http://fonts.googleapis.com/css?family=Merriweather+Sans:300' rel='stylesheet' type='text/css'>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <style>
+            h1{
+                font-family: 'Merriweather Sans', sans-serif;
+                background:#F60;
+                color:white;
+                padding:5px;
+            }
+            input[type=text]{
+                border:solid 1px;
+                padding:0px 1px;
+            }
+            hr{
+                border:solid 1px #bbb;
+            }
+            table#linktable{
+                margin:auto;
+            }
+            table#linktable,table#linktable tr,table#linktable tr td{
+                border:solid 1px #bbb;
+                border-collapse:collapse;
+            }
+            table#linktable tr td{
+                padding:2px;
+            }
+            table#linktable tr td:nth-child(1){
+                width:350px;
+            }
+            table#linktable tr td:nth-child(2){
+                width:500px;
+            }
+            table#linktable tr td em{
+                color:red;
+            }
+        </style>
+        <script src="utils.js"></script>
+        <script src="options.js"></script>
+    </head>
+    <body>
+        <h1>
+            HN post watcher
+        </h1>
+        <h3>Options</h3>
+        <form id="options">
+            <input type="checkbox" name="isActivated" checked>
+            Watch for updates every <input class="input-text" style="text-align:center" type="text" name="frequency" value="10" size="3"> minute(s).
+            <br>
+            <h4>Add post to watch</h4>
+            Link <input type="text" id="newlink" size="35"/> <button id="addlink">add</button>
+        </form>
+        <hr>
+        <h3>Watching links</h3>
+        <table id="linktable">
+        </table>
+    </body>
+</html>

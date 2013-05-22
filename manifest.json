@@ -1,0 +1,22 @@
+{
+    "name": "HN Post Update Watcher",
+        "version": "1.0",
+        "description":
+            "Shows off desktop notifications as watched posts gets new comments on HackerNews",
+        "icons": {"16": "hn16.png", "48": "hn48.png", "128": "hn128.png"},
+        "permissions": ["tabs", "notifications","https://news.ycombinator.com/","contextMenus"],
+        "options_page": "options.html",
+        "background": { "scripts": ["background.js"] },
+        "content_scripts":[
+            {
+                "matches": ["*://*/*"],
+                "js": ["utils.js"]
+            }
+        ],
+        "manifest_version": 2,
+
+        // crbug.com/134315
+        "web_accessible_resources": [
+            "hn48.png"
+            ]
+}
