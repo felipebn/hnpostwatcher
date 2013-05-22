@@ -18,7 +18,7 @@ function checkUpdates() {
             var notification = window.webkitNotifications.createNotification(
                     'hn48.png',
                     'HN Post Updated',
-                    title + " ("+ delta  +"new comments)"
+                    title + " ("+ delta  +" new comments)"
                     );
             notification.onclick = function(){
                 window.open(link);
